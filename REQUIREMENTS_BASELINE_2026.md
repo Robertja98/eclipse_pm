@@ -26,6 +26,11 @@ Create a clear, auditable baseline of what the system must do and what is curren
   - `ARCHITECTURE_DECISIONS_2026.md`
   - `DATA_DICTIONARY_2026.md`
   - `TEST_STRATEGY_2026.md`
+  - `FUNDING_DELIVERABLE_MATRIX_2026.md`
+  - `PERSONNEL_GOVERNANCE_2026.md`
+  - `AI_REVIEW_POLICY_2026.md`
+  - `FACILITY_SETUP_STANDARDS_2026.md`
+  - `DATA_VALIDATION_RULES_2026.md`
 
 ### Maturity scale
 - `Defined`: Requirement documented and approved in planning docs.
@@ -105,35 +110,39 @@ Create a clear, auditable baseline of what the system must do and what is curren
 ### Currently have (ready)
 - Project vision, objectives, and architecture direction.
 - Pre-coding governance, milestones, and phase-gate structure.
-- Initial ADRs for core technical decisions.
-- Initial data dictionary for key entities.
+- Complete ADRs with finalized decisions (data store + audit strategy accepted).
+- Complete data dictionary with all planned tables (core, people, equipment, AI, facility, planning, access/reporting).
 - Test strategy and critical compliance test cases.
+- Funding deliverable matrix (`FUNDING_DELIVERABLE_MATRIX_2026.md`).
+- Personnel governance rules (`PERSONNEL_GOVERNANCE_2026.md`).
+- AI review policy (`AI_REVIEW_POLICY_2026.md`).
+- Facility setup standards (`FACILITY_SETUP_STANDARDS_2026.md`).
+- Data validation rules (`DATA_VALIDATION_RULES_2026.md`).
+- Approval metadata headers on all planning documents.
 
 ### Missing (before implementation gate)
-- Funding deliverable matrix by program (`IRAP`, `FedDev`, `NGen`, `OCE/OCI`, `BDC`).
-- Approval metadata (`v1.0`, owner, approver, date, status) on all planning docs.
-- Confirmed decision outcomes for proposed ADRs (data store + audit strategy).
-- Full schema coverage for remaining planned tables (`sprints`, `backlog_items`, `risks`, `procurements`, `users`, `reports`).
-- Full schema coverage for equipment and collection tables (`equipment_assets`, `equipment_calibrations`, `experiment_equipment`, `data_collection_records`).
-- Personnel governance rules (`founder` bootstrap account, role transitions, contractor classification rules).
-- AI governance and schema coverage (`ai_models`, `ai_analysis_runs`, `ai_recommendations`) with reviewer workflow rules.
-- Facility and space governance coverage (`facility_spaces`, `facility_readiness_checks`) with zone usage rules.
 - Sprint 1 backlog with story-level acceptance criteria and estimates.
+- Formal approval signatures on planning documents (status currently "Draft").
 
 ## 8. Phase-Gate Readiness Statement
 ### Ready now
-- Requirements are sufficiently defined to proceed with final pre-coding documentation closure.
+- All governance and policy documentation complete.
+- Requirements baseline finalized.
+- Data dictionary covers all planned entities.
+- Architecture decisions finalized.
+- Ready to create Sprint 1 backlog and begin implementation planning.
 
 ### Not ready yet
-- Not ready to start coding until missing items above are completed and approved.
+- Not ready to start coding until Sprint 1 backlog is defined and planning documents are formally approved.
 
 ## 9. Immediate Actions (Ordered)
-1. Create and approve `FUNDING_DELIVERABLE_MATRIX_2026.md`.
-2. Add approval/version metadata header to all planning documents.
-3. Finalize ADR-002 and ADR-003 from `Proposed` to `Accepted` or `Superseded`.
-4. Expand `DATA_DICTIONARY_2026.md` for all core planned tables, including equipment and data collection entities.
-5. Define validation rules for data collection (required fields, units, ranges, provenance) and map to acceptance tests.
-6. Define personnel data standards (roles, eligibility tags, labour categories, evidence rules) for CRA/IRAP reporting.
-7. Define AI review policy (confidence thresholds, approval requirements, override rationale) and map to compliance tests.
-8. Define facility setup standards (space zoning, readiness checks, location tagging) and map to compliance tests.
-9. Produce Sprint 1 backlog with requirement traceability (`FR-*`, `CR-*`, `NFR-*`).
+1. ✓ ~~Create and approve `FUNDING_DELIVERABLE_MATRIX_2026.md`~~ (Complete)
+2. ✓ ~~Add approval/version metadata header to all planning documents~~ (Complete)
+3. ✓ ~~Finalize ADR-002 and ADR-003 from `Proposed` to `Accepted`~~ (Complete)
+4. ✓ ~~Expand `DATA_DICTIONARY_2026.md` for all core planned tables~~ (Complete)
+5. ✓ ~~Define validation rules for data collection~~ (Complete - see `DATA_VALIDATION_RULES_2026.md`)
+6. ✓ ~~Define personnel data standards~~ (Complete - see `PERSONNEL_GOVERNANCE_2026.md`)
+7. ✓ ~~Define AI review policy~~ (Complete - see `AI_REVIEW_POLICY_2026.md`)
+8. ✓ ~~Define facility setup standards~~ (Complete - see `FACILITY_SETUP_STANDARDS_2026.md`)
+9. **Produce Sprint 1 backlog with requirement traceability** (`FR-*`, `CR-*`, `NFR-*`) - NEXT ACTION
+10. **Obtain formal approval on all planning documents** (move from Draft to Approved status)
