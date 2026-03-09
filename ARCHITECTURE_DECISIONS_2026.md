@@ -1,0 +1,61 @@
+# ARCHITECTURE DECISIONS 2026
+
+## Purpose
+Track major technical decisions before and during implementation with rationale, alternatives, and impact.
+
+## ADR-001: Application Pattern
+- Status: Accepted
+- Date: 2026-03-09
+- Decision: Use modular MVC-style PHP architecture.
+- Context: Need maintainable separation for SR&ED, PMBOK, Agile, cost, and reporting modules.
+- Alternatives considered:
+  - Monolithic procedural PHP
+  - Heavy full-stack framework
+- Rationale: MVC provides clear boundaries while keeping local-hosted deployment simple.
+- Consequences:
+  - Positive: Better maintainability and testability.
+  - Negative: Requires disciplined folder/module ownership.
+
+## ADR-002: Data Store Strategy
+- Status: Proposed
+- Date: 2026-03-09
+- Decision: Keep model/repository abstraction to support MyZIM and MariaDB.
+- Context: Project needs flexibility in deployment and evolving storage requirements.
+- Alternatives considered:
+  - MariaDB only
+  - MyZIM only
+- Rationale: Abstraction reduces lock-in and allows phased migration.
+- Consequences:
+  - Positive: Storage flexibility.
+  - Negative: Slightly more design work upfront.
+
+## ADR-003: Audit and Immutability Strategy
+- Status: Proposed
+- Date: 2026-03-09
+- Decision: Append-only audit events for experiment and evidence changes.
+- Context: SR&ED 2026 requires robust timestamped and traceable records.
+- Alternatives considered:
+  - Overwrite in place with updated timestamps only
+  - Full event sourcing for all entities
+- Rationale: Append-only audit logs are simpler than full event sourcing and still audit-grade.
+- Consequences:
+  - Positive: Strong traceability and defensibility.
+  - Negative: More storage and reporting joins.
+
+## ADR Template
+Use this template for all future decisions:
+
+```md
+## ADR-XXX: <Title>
+- Status: Proposed | Accepted | Superseded
+- Date: YYYY-MM-DD
+- Decision:
+- Context:
+- Alternatives considered:
+  - A
+  - B
+- Rationale:
+- Consequences:
+  - Positive:
+  - Negative:
+```
