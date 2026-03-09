@@ -160,11 +160,11 @@ A backlog item is done when:
 ## 12. Phase Gate Approval Record
 | Gate | Approver | Date | Status | Notes |
 |---|---|---|---|---|
-| Planning Baseline |  |  | Pending |  |
-| Architecture Baseline |  |  | Pending |  |
-| Compliance Baseline |  |  | Pending |  |
-| Sprint Plan |  |  | Pending |  |
-| Funding Framework |  |  | Pending |  |
+| Planning Baseline | Requirements + data dictionary + validation rules | 2026-03-09 | Complete | All governance docs published |
+| Architecture Baseline | ADRs finalized, schema complete | 2026-03-09 | Complete | ADR-002, ADR-003 accepted |
+| Compliance Baseline | SR&ED/IRAP/funding requirements mapped | 2026-03-09 | Complete | See FUNDING_DELIVERABLE_MATRIX |
+| Sprint Plan | Sprint 1 backlog with traceability | TBD | Pending | Next action |
+| Funding Framework | Program deliverable requirements | 2026-03-09 | Complete | See governance policies |
 
 ## 13. Immediate Next Documentation Tasks
 1. Create `ARCHITECTURE_DECISIONS_2026.md` with ADR-style entries for routing, ORM/data access, and audit-log strategy.

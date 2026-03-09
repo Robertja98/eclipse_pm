@@ -51,7 +51,7 @@ Create a clear, auditable baseline of what the system must do and what is curren
 | FR-008 | Maintain PMBOK risk register with scoring and mitigation | Must | Defined | PMBOK planner scope |
 | FR-009 | Track procurements and vendor records | Should | Defined | PMBOK procurement scope |
 | FR-010 | Generate SR&ED-ready narrative report output | Must | Defined | Planned in Sprint 6 |
-| FR-011 | Generate funding/grant package outputs (IRAP/FedDev/NGen/OCE/OCI/BDC) | Must | Defined | Matrix doc still pending |
+| FR-011 | Generate funding/grant package outputs (IRAP/FedDev/NGen/OCE/OCI/BDC) | Must | Designed | See FUNDING_DELIVERABLE_MATRIX_2026.md |
 | FR-012 | Enforce authentication and role-based access | Must | Defined | Planned in Sprint 1 |
 | FR-013 | Register and manage lab equipment (asset ID, type, location, status, owner) | Must | Defined | Required for experiment traceability |
 | FR-014 | Track equipment calibration/maintenance history and due dates | Must | Defined | Compliance and data quality control |
@@ -90,7 +90,7 @@ Create a clear, auditable baseline of what the system must do and what is curren
 | RF-002 | Commercialization roadmap report | Should | Defined | Structure identified, template pending |
 | RF-003 | Technical merit narrative report | Must | Defined | Template pending |
 | RF-004 | Budget burn-down report | Must | Defined | Cost module dependency |
-| RF-005 | Program-specific export packages | Must | Defined | Funding deliverable matrix pending |
+| RF-005 | Program-specific export packages | Must | Designed | See FUNDING_DELIVERABLE_MATRIX_2026.md |
 
 ## 6. Non-Functional Requirements
 | ID | Requirement | Priority | Current Maturity | Target |
