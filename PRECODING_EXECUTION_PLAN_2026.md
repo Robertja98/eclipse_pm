@@ -1,5 +1,15 @@
 # PRE-CODING EXECUTION PLAN 2026
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## 1. Objective
 Define a delivery-ready plan before coding begins for the Mixed Bed Resin R&D Management Application, ensuring SR&ED 2026, PMBOK, Agile, and funding requirements are traceable from requirement to evidence.
 

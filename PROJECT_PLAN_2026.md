@@ -1,5 +1,15 @@
 # PROJECT PLAN 2026 - Mixed Bed Resin R&D Management Application
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## HTML + PHP + ZIM Architecture
 
 ## 1. Project Purpose

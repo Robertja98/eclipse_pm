@@ -1,5 +1,15 @@
 # REQUIREMENTS BASELINE 2026
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## 1. Purpose
 Create a clear, auditable baseline of what the system must do and what is currently available in the repository before coding starts.
 

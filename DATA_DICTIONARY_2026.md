@@ -1,5 +1,15 @@
 # DATA DICTIONARY 2026
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## 1. Purpose
 Define canonical entity and field meaning for the 2026 R&D management system before implementation.
 

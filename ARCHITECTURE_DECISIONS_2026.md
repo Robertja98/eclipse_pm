@@ -1,5 +1,15 @@
 # ARCHITECTURE DECISIONS 2026
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## Purpose
 Track major technical decisions before and during implementation with rationale, alternatives, and impact.
 
@@ -17,8 +27,9 @@ Track major technical decisions before and during implementation with rationale,
   - Negative: Requires disciplined folder/module ownership.
 
 ## ADR-002: Data Store Strategy
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-03-09
+- Accepted: 2026-03-09
 - Decision: Keep model/repository abstraction to support MyZIM and MariaDB.
 - Context: Project needs flexibility in deployment and evolving storage requirements.
 - Alternatives considered:
@@ -30,8 +41,9 @@ Track major technical decisions before and during implementation with rationale,
   - Negative: Slightly more design work upfront.
 
 ## ADR-003: Audit and Immutability Strategy
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-03-09
+- Accepted: 2026-03-09
 - Decision: Append-only audit events for experiment and evidence changes.
 - Context: SR&ED 2026 requires robust timestamped and traceable records.
 - Alternatives considered:

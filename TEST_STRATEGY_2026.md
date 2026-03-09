@@ -1,5 +1,15 @@
 # TEST STRATEGY 2026
 
+---
+**Document Version:** v1.0  
+**Status:** Draft  
+**Owner:** Founder  
+**Approver:** TBD  
+**Approval Date:** TBD  
+**Last Updated:** 2026-03-09  
+
+---
+
 ## 1. Objective
 Define how quality and compliance will be verified before coding starts.
 
