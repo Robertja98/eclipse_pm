@@ -19,7 +19,17 @@
 - **Sprint Days:** 10 working days
 
 ### Sprint Goal
-Establish core application foundation: user authentication, project/experiment CRUD, basic evidence intake, and labour tracking to enable hands-on testing of workflows.
+Establish authentication system and core identity management using ZIM database. Enable login workflow, role-based access, and foundational person/team records.
+
+### Technical Foundation
+Sprint 1 focuses on **ZIM infrastructure and authentication**:
+- Set up ZimXClient adapter and session management
+- Implement repository pattern for user/people persistence
+- Create auth service with bcrypt hashing and session management
+- Bootstrap founder account via seed script
+- Establish RBAC framework for future feature protection
+
+For detailed technical implementation patterns, see `ZIM_IMPLEMENTATION_GUIDE.md` and `SPRINT_1_PLAN.md`.
 
 ### Success Criteria
 - All 8 stories below completed and tested
@@ -261,9 +271,10 @@ Establish core application foundation: user authentication, project/experiment C
 ## 5. Technical Implementation Notes
 
 ### Database Setup
-- Use MyZIM or MariaDB (per ADR-002)
-- Run migrations for: users, people, projects, experiments, experiment_versions, evidence_files, labour_entries, cost_entries
+- Use MyZIM (ZIM document/database format) as primary data store
+- Initialize ZIM schema file with tables: users, people, projects, experiments, experiment_versions, evidence_files, labour_entries, cost_entries
 - Seed with founder user and founder person record
+- Use ZIM PHP SDK/wrapper for data access layer (abstraction per ADR-002)
 
 ### Code Organization (per PROJECT_PLAN_2026.md)
 ```
@@ -296,6 +307,7 @@ Establish core application foundation: user authentication, project/experiment C
     ExperimentService.php
     LabourService.php
     CostService.php
+    ZimDataProvider.php  (ZIM abstraction layer)
   
   /Views
     /layouts/app.html
@@ -314,8 +326,8 @@ Establish core application foundation: user authentication, project/experiment C
     /costs/list.html
     /dashboard/index.html
 
-/config
-  /config.php         (DB connection, constants)
+/zim
+  /schema.zim        (ZIM database file)
 
 /tests
   /unit/

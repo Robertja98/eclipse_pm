@@ -60,6 +60,8 @@ Define a delivery-ready plan before coding begins for the Mixed Bed Resin R&D Ma
 - 2.2 Define routing conventions and controller responsibilities.
 - 2.3 Define data model and table ownership.
 - 2.4 Define evidence storage and retention rules.
+- 2.5 ✓ Design ZIM Repository Pattern and ZimXClient adapter (COMPLETE)
+- 2.6 ✓ Create ZIM implementation guide with examples (COMPLETE)
 
 ### WBS 3.0 Compliance Design
 - 3.1 Define SR&ED experiment schema and mandatory fields.
@@ -97,6 +99,13 @@ Exit criteria:
 - SR&ED data capture fields finalized.
 - Audit log requirements finalized.
 - Reporting output requirements finalized.
+
+### M4 - ZIM Infrastructure Ready (New)
+Exit criteria:
+- ZIM engine installed and running on localhost:6002
+- ZimXClient adapter tested with full schema deployed
+- Sprint 1 ready to start (Day 1: ZIM setup, Days 2-10: auth + identity)
+- See `ZIM_IMPLEMENTATION_GUIDE.md` for checklist
 
 ### M4 - Sprint Plan Approved
 Exit criteria:

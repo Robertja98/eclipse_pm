@@ -13,6 +13,9 @@
 ## 1. Purpose
 Define canonical entity and field meaning for the 2026 R&D management system before implementation.
 
+### Implementation Reference
+**See [ZIM_IMPLEMENTATION_GUIDE.md](ZIM_IMPLEMENTATION_GUIDE.md) Section 7 for complete DDL schema** – This document provides human-readable table definitions; the ZIM Implementation Guide Section 7 provides the executable ZIM schema (`/zim/schema.zim`) with all data types, constraints, and indexes.
+
 ## 2. Conventions
 - Primary key: `id` (INT AUTO_INCREMENT).
 - Foreign key naming: `<entity>_id`.

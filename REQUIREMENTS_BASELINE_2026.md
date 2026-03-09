@@ -15,11 +15,20 @@ Create a clear, auditable baseline of what the system must do and what is curren
 
 ## 2. Current-State Summary
 ### Repository status
-- Current phase: Documentation and planning.
+- Current phase: Architecture finalized, Sprint 1 ready to start.
 - Implementation code: Not started.
 - Current team baseline: Single founder/operator (1 person) at project start.
 - AI integration baseline: Planned for data ingestion, interpretation, and recommendation support.
 - Facility baseline: Physical shop/lab setup and space zoning requirements to be documented before build.
+
+### Tech Stack (Finalized)
+- **Frontend:** HTML5, CSS3, JavaScript (no framework)
+- **Backend:** PHP 8+ (modular MVC style)
+- **Database:** ZIM/Zim-X (session-persistent data sets)
+- **Architecture Pattern:** Repository Pattern with ZimXClient adapter
+- **ORM/Query Layer:** Custom ZimX adapter (see `ZIM_IMPLEMENTATION_GUIDE.md`)
+- **Testing:** PHPUnit for unit/integration tests
+- **Hosting:** localhost:6002 (ZIM on port 6002, PHP on port 80/8080)
 - Available artifacts:
   - `PROJECT_PLAN_2026.md`
   - `PRECODING_EXECUTION_PLAN_2026.md`
@@ -31,6 +40,9 @@ Create a clear, auditable baseline of what the system must do and what is curren
   - `AI_REVIEW_POLICY_2026.md`
   - `FACILITY_SETUP_STANDARDS_2026.md`
   - `DATA_VALIDATION_RULES_2026.md`
+  - `ZIM_IMPLEMENTATION_GUIDE.md` (Technical reference for ZIM adapter pattern)
+  - `ZIM_QUICK_REFERENCE.md` (ZIM command cheat sheet)
+  - `SPRINT_1_PLAN.md` (Detailed Sprint 1 roadmap with 6 stories)
 
 ### Maturity scale
 - `Defined`: Requirement documented and approved in planning docs.

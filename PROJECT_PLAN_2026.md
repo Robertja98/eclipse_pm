@@ -10,19 +10,33 @@
 
 ---
 
-## HTML + PHP + ZIM Architecture
-
 ## 1. Project Purpose
 This application supports R&D activities for improving mixed bed resin treatment. It integrates PMBOK planning, Agile execution, SR&ED 2026 compliance, and BDO/grant funding requirements. It provides experiment tracking, cost attribution, evidence storage, and automated reporting.
 
-The system is built using:
-- Frontend: HTML5, CSS3, JavaScript
-- Backend: PHP 8+
-- Database: MyZIM or MariaDB
-- Architecture: MVC style modular PHP
-- Hosting: localhost
+## 2. Tech Stack (Finalized for Implementation)
+- **Frontend:** HTML5, CSS3, JavaScript (vanilla, no framework)
+- **Backend:** PHP 8+ (modular MVC architecture)
+- **Database:** ZIM/Zim-X (session-persistent data sets on localhost:6002)
+- **Architecture Pattern:** Repository Pattern with ZimXClient adapter
+- **Persistence Layer:** Custom ZimXClient for ZIM command execution and session management
+- **Testing:** PHPUnit with mock repositories and real ZIM integration tests
+- **Hosting:** localhost (PHP on port 80/8080, ZIM on port 6002)
 
-## 2. Core Objectives
+### ZIM Advantages for This Project
+- **Session-persistent data sets** align with sprint/batch experimental execution
+- **Built-in audit/version support** for SR&ED compliance
+- **Simple local deployment** suitable for R&D lab environment
+- **No complex ORM dependency** suitable for custom compliance workflows
+
+For implementation details, see:
+- `ZIM_IMPLEMENTATION_GUIDE.md` – Architecture, repository patterns, examples
+- `ZIM_QUICK_REFERENCE.md` – Common ZIM commands and repository patterns
+- `SPRINT_1_PLAN.md` – Detailed 2-week roadmap with 6 stories
+
+## 3. Iteration Roadmap (6 Sprints)
+See `SPRINT_1_PLAN.md` for detailed technical breakdown of authentication and identity management in Sprint 1.
+
+## 4. Core Objectives
 - Document resin treatment R&D in a SR&ED compliant format.
 - Track experiments, failures, iterations, and advancements.
 - Attribute labour, materials, and subcontractor costs to activities.
@@ -32,7 +46,7 @@ The system is built using:
 - Produce BDO/IRAP/FedDev/NGen ready project packages.
 - Maintain immutable, timestamped evidence.
 
-## 3. 2026 SR&ED Requirements (Integrated Into System Design)
+## 5. 2026 SR&ED Requirements (Integrated Into System Design)
 ### Mandatory compliance features
 - Explicit documentation of technological uncertainty.
 - Structured experiment workflow:
@@ -53,7 +67,7 @@ The system is built using:
 - Automation and software development qualify if technical uncertainty exists.
 - Data driven experimentation is explicitly recognized.
 
-## 4. BDO & Grant Funding Requirements (2026 Standards)
+## 6. BDO & Grant Funding Requirements (2026 Standards)
 ### Required deliverables
 - Milestone based project plan.
 - Commercialization roadmap.
@@ -68,7 +82,7 @@ The system is built using:
   - OCE/OCI
   - BDC Tech Loans
 
-## 5. PMBOK Integration
+## 7. PMBOK Integration
 ### Integration Management
 Project charter, change log, versioning.
 
@@ -96,7 +110,7 @@ Risk register, scoring, mitigation tracking.
 ### Procurement Management
 Vendor tracking, purchase logs, chemical/equipment procurement.
 
-## 6. Agile Execution Layer
+## 8. Agile Execution Layer
 ### Sprint Structure
 Two week sprints with backlog, reviews, retrospectives.
 

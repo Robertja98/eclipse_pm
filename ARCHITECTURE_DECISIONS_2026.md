@@ -54,6 +54,21 @@ Track major technical decisions before and during implementation with rationale,
   - Positive: Strong traceability and defensibility.
   - Negative: More storage and reporting joins.
 
+## ADR-004: Repository Abstraction with ZimXClient
+- Status: Accepted
+- Date: 2026-03-09
+- Decision: Use Repository Pattern with ZimXClient adapter for all persistence operations.
+- Context: ZIM database requires explicit session management and command execution. Repository abstraction isolates ZIM complexity from business logic while supporting future migration.
+- Alternatives considered:
+  - Direct ZIM queries in controllers (tight coupling)
+  - ORM library (ZIM not supported by standard ORMs)
+  - Raw SQL with prepared statements (less maintainable)
+- Rationale: ZimXClient adapter encapsulates ZIM-specific behavior (session sets, FIND/INSERT/UPDATE commands, parameter binding), allowing services to remain database-agnostic.
+- Consequences:
+  - Positive: Clear boundaries between persistence and logic; testable via mock repositories; supports future storage migration.
+  - Negative: Requires custom adapter maintenance; FIND/INSERT/UPDATE style differs from typical SQL ORMs.
+- Implementation: See `ZIM_IMPLEMENTATION_GUIDE.md` for detailed patterns and examples.
+
 ## ADR Template
 Use this template for all future decisions:
 
