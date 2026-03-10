@@ -307,23 +307,25 @@ Define canonical entity and field meaning for the 2026 R&D management system bef
 | status | VARCHAR(50) | Yes | Planned, Active, Closed |
 | created_at | TIMESTAMP | Yes | Record creation time |
 
-### Table: `backlog_items`
-| Field | Type | Required | Description |
-|---|---|---|---|
-| id | INT | Yes | Backlog item identifier |
-| project_id | INT | Yes | Parent project |
-| sprint_id | INT | No | Assigned sprint |
-| title | VARCHAR(255) | Yes | Work item title |
-| description | TEXT | No | Detailed description |
-| item_type | VARCHAR(60) | Yes | Uncertainty, Experiment, DevTask, DocTask |
-| priority | VARCHAR(40) | Yes | Must, Should, Could |
-| status | VARCHAR(50) | Yes | Todo, In Progress, Blocked, Done |
-| estimate_points | INT | No | Story points |
-| owner_person_id | INT | No | Assigned owner |
-| requirement_refs | VARCHAR(255) | No | Comma list of FR/CR/NFR IDs |
-| created_at | TIMESTAMP | Yes | Record creation time |
-| updated_at | TIMESTAMP | No | Last update time |
+### Table: backlog_items (ZIM.ebacklog)
 
+| Field Name         | ZIM Name           | Type         | Length | Dec | Required | Description                                      |
+|--------------------|--------------------|--------------|--------|-----|----------|--------------------------------------------------|
+| id                 | fbacklog_id        | INT          | 5      | 0   | No       | Backlog item identifier                          |
+| project_id         | fproject_id        | INT          | 5      | 0   | Yes      | Parent project                                   |
+| sprint_id          | fsprint_id         | ALPHA        | 10     | 0   | Yes      | Assigned sprint                                  |
+| title              | fbacklog_title     | VARCHAR      | 225    | 0   | Yes      | Work item title                                  |
+| description        | fbacklog_descrip   | VARCHAR      | 225    | 0   | No       | Detailed description                             |
+| item_type          | fbacklog_type      | VARCHAR      | 60     | 0   | Yes      | Uncertainty, Experiment, DevTask, DocTask        |
+| priority           | fbacklog_priority  | VARCHAR      | 40     | 0   | Yes      | Must, Should, Could                              |
+| status             | fbacklog_status    | VARCHAR      | 50     | 0   | Yes      | Todo, In Progress, Blocked, Done                 |
+| estimate_points    | fbacklog_est_point | INT          | 5      | 0   | No       | Story points                                     |
+| owner_person_id    | fpeople_id         | INT          | 5      | 0   | Yes      | Assigned owner                                   |
+| requirement_refs   | fbacklog_reqmets   | VARCHAR      | 255    | 0   | No       | Comma list of FR/CR/NFR IDs                      |
+| created_at         | fbacklog_created   | DATETIME     | -      | 0   | Yes      | Record creation time                             |
+| updated_at         | fbacklog_updated   | DATETIME     | -      | 0   | No       | Last update time                                 |
+
+*ZIM.ebacklog = ZIM schema entity name for backlog_items*
 ### Table: `risks`
 | Field | Type | Required | Description |
 |---|---|---|---|
